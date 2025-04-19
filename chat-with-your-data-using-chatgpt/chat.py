@@ -100,5 +100,5 @@ while question.lower() != "exit":
 
     chat_history.extend([HumanMessage(content=question), ai_msg["answer"]])
 
-    print(ai_msg["answer"])
-    question = input("Please enter your question: (or type 'exit' to finish the conversation) ")
+    print(ai_msg["answer"] + "\n")
+    question = input("")
