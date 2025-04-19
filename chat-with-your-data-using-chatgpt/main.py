@@ -73,5 +73,21 @@ rag_chain = (
     | StrOutputParser() #convert the chat message to a string
 )
 
+print(question + "\n\n")
+for chunk in rag_chain.stream(question):
+    print(chunk, end="", flush=True)
+
+question = "Who are the top 10 drivers in the first F1 GP of the 2025 season?"
+print("\n\nQ:" + question + "\n\n")
+for chunk in rag_chain.stream(question):
+    print(chunk, end="", flush=True)
+
+question = "What team is Lewis Hamilton driving for in the 2025 season?"
+print("\n\nQ:" + question + "\n\n")
+for chunk in rag_chain.stream(question):
+    print(chunk, end="", flush=True)
+
+question = "What team is Liam Lawson driving for in the 2025 season?"
+print("\n\nQ:" + question + "\n\n")
 for chunk in rag_chain.stream(question):
     print(chunk, end="", flush=True)
